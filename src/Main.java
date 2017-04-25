@@ -17,7 +17,19 @@ public class Main {
         String line;
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
-            System.out.println(line);
+            multiples(line);
         }
+    }
+    
+    public static void multiples(String line) {
+        String[] tokens = line.split(",");
+        int x = Integer.parseInt(tokens[0]);
+        int n = Integer.parseInt(tokens[1]);
+        
+        while(x > n) {
+            n += n;
+        }
+        
+        System.out.println(n);
     }
 }
