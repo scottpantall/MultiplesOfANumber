@@ -25,11 +25,12 @@ public class Main {
         String[] tokens = line.split(",");
         int x = Integer.parseInt(tokens[0]);
         int n = Integer.parseInt(tokens[1]);
+        int total = n;
         
-        while(x > n) {
-            n += n;
+        while(total <= x) {
+            total += n;
         }
         
-        System.out.println(n);
+        System.out.println(total);
     }
 }
